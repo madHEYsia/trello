@@ -1,0 +1,191 @@
+body {
+  background-color: rgb(0, 121, 191);
+}
+header {
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 10px 0px;
+}
+
+#root {
+  display: flex;
+  height: 90vh;
+  overflow-x: auto;
+}
+
+.listWrapper {
+  margin: 20px 10px 20px 6px;
+  background-color: transparent;
+}
+
+.onListHighlight {
+  transition: background-color 0.25s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.list {
+  font-size: 15px;
+  background: lightgrey;
+  width: 270px;
+  height: fit-content;
+  padding: 10px;
+  min-width: 270px;
+}
+
+.listName {
+  color: #172b4d;
+  font-weight: bold;
+  margin: 0px 5px 10px;
+}
+
+.addList {
+  background-color: #ffffff3d;
+  height: fit-content;
+  cursor: pointer;
+  padding: 10px 16px;
+  color: white;
+  min-width: 257px;
+  margin: 20px 10px;
+}
+
+#addListTemplate {
+  margin: 20px 10px;
+}
+
+.card {
+  background-color: #ebecf0;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.addCard {
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 8px;
+  opacity: 0.7;
+}
+
+.textInput {
+  width: 98%;
+  min-height: 40px;
+  margin-bottom: 5px;
+  border: 1px solid #d8d8d8;
+  outline: none;
+  font-size: 15px;
+}
+
+.cardTitle {
+  max-width: 260px;
+  min-width: 99%;
+  max-height: 60px;
+}
+
+#list-input {
+  width: 260px;
+}
+
+button {
+  padding: 6px 12px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+}
+
+.addButton {
+  background-color: #5aac44;
+}
+
+.cancelButton {
+  background-color: #dc4c4c;
+}
+
+.deleteButton {
+  background-color: darkgrey;
+  float: right;
+}
+
+.edit {
+  display: none;
+  float: right;
+  cursor: pointer;
+  padding: 2px 5px;
+  background-color: lightgray;
+  border-radius: 5px;
+  margin-top: -20px;
+}
+
+.card:hover .edit {
+  display: block;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #212121;
+  opacity: 0.7;
+}
+
+.cardEditor {
+  max-width: 400px;
+  height: 280px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: white;
+}
+
+.cardEditorTitle {
+  color: #212121;
+  background-color: transparent;
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cardEditorWrapper {
+  padding: 10px 20px;
+}
+
+.cardEditorWrapper .textInput {
+  margin-bottom: 20px;
+  min-width: 98%;
+  max-width: 98%;
+  max-height: 60px;
+  padding: 0px 10px;
+}
+
+.closeModal {
+  float: right;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  #root {
+    display: block;
+  }
+  .list {
+    width: calc(100% - 20px);
+  }
+  .cardTitle {
+    max-width: 99%;
+  }
+  #list-input {
+    width: 100%;
+    margin-left: -5px;
+  }
+  .addList {
+    margin: 20px 10px 20px 6px;
+  }
+}
